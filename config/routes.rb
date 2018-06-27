@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  get 'register_attractions/index'
+  get 'register_attractions/show'
+  get 'register_attractions/edit'
+  get 'register_attractions/destroy'
   devise_for :companies
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  
+  root "register_attractions#index"
 end

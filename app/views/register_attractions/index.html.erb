@@ -1,1 +1,36 @@
-<%= @attractions%>
+<div class="row"> 
+	<%= link_to "Adicionar Atração", {:action => "new", :controller => "register_attractions"}, {:class => "btn btn-success float-right"}%>
+</div>
+
+<div class="row">
+	<table class="table">
+		<thead class="thead-dark">
+			<tr>
+				<th scope="col">#</th>
+				<th scope="col">Nome</th>
+				<th scope="col">Endereço</th>
+				<th scope="col">Tempo de Duração</th>
+				<th scope="col">Máxima de Pessoas</th>
+				<th scope="col">Imagem</th>
+				<th scope="col">Preço</th>
+				<th scope="col">Ações</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% @attractions.each do |attraction| %>
+				<tr>
+					<td><%= attraction.id%></td>
+					<td><%= attraction.name %></td>
+					<td><%= attraction.address %></td>
+					<td><%= attraction.duration_time %></td>
+					<td><%= attraction.max_people %></td>
+					<td><%= image_tag attraction.image(:medium)%></td>
+					<td><%= attraction.price%></td>
+					<td>
+						
+					</td>
+				</tr>
+			<% end -%>
+		</tbody>
+	</table>
+</div>

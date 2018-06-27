@@ -1,10 +1,12 @@
 <h1>Editar atração</h1>
-<%= simple_form_for(@attraction, url: {:action => "update", :controller=>"register_attractions"}, :method=> "POST") do |f|%>
-	
-	<%= f.input :name , label: "Nome:"%>
+<%= simple_form_for(@attraction, url: {:action => "update", :controller=>"register_attractions"}, :method=> "PUT") do |f|%>	
+	<%= f.input :id , as: 'hidden' %>
+	<%= f.input :name ,label: "Nome:"%>
 	<%= f.input :address , label: "Endereço:"%>
 	<%= f.input :duration_time , label: "Duração da Atração:"%>
 	<%= f.input :max_people, label: "Máximo de Pessoas:" %>
+
+	<%= image_tag @attraction.image(:medium)%>
 	<%= f.input :image, label: "Image:" %>
 	<%= f.input :price, label: "Preço:" %>
 

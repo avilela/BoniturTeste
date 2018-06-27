@@ -1,7 +1,7 @@
 <div class="row"> 
 	<%= link_to "Adicionar Atração", {:action => "new", :controller => "register_attractions"}, {:class => "btn btn-success float-right"}%>
 </div>
-
+<br>
 <div class="row">
 	<table class="table">
 		<thead class="thead-dark">
@@ -28,7 +28,7 @@
 					<td><%= attraction.price%></td>
 					<td>
 						<%= link_to "Editar", {controller: "register_attractions", action: 'edit', id: attraction.id }, :class => "btn btn-warning"%>
-						<%= link_to "Deletar", {}, :class => "btn btn-danger"%>
+						<%= link_to "Deletar",{ controller: "register_attractions", action: 'destroy', id: attraction.id} ,  method: :delete, data: { confirm: 'Tem certeza?' }, :class => "btn btn-danger" %></td>
 					</td>
 				</tr>
 			<% end -%>

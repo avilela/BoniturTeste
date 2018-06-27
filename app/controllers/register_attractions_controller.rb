@@ -19,8 +19,8 @@ class RegisterAttractionsController < ApplicationController
 	end
 
 	def update
-		if @attraction.update(attraction_params)
-        	redirect_to  root_path, notice: 'Atração Alterada com sucesso.'
+		if @attraction.update(attractive_params)
+        	redirect_to root_path
         end
   	end
 
@@ -30,6 +30,10 @@ class RegisterAttractionsController < ApplicationController
 	def edit
 	end
 
+	def destroy
+	 	@attraction.destroy
+	 	redirect_to root_path
+	end
 	private 
 		def attractive_params
 			params.require(:attraction).permit(:name,:address,:duration_time,:max_people,:image,:price,:company_id)

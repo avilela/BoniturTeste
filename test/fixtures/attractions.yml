@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  address: MyText
+  duration_time: 2018-06-27 01:02:12
+  max_people: MyString
+  image: 
+  price: 9.99
+  company: one
+
+two:
+  name: MyString
+  address: MyText
+  duration_time: 2018-06-27 01:02:12
+  max_people: MyString
+  image: 
+  price: 9.99
+  company: two

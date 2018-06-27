@@ -10,10 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_27_003815) do
+ActiveRecord::Schema.define(version: 2018_06_27_010212) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "attractions", force: :cascade do |t|
+    t.string "name"
+    t.text "address"
+    t.time "duration_time"
+    t.string "max_people"
+    t.string "image_file_name"
+    t.string "image_content_type"
+    t.integer "image_file_size"
+    t.datetime "image_updated_at"
+    t.decimal "price"
+    t.bigint "company_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["company_id"], name: "index_attractions_on_company_id"
+  end
 
   create_table "companies", force: :cascade do |t|
     t.string "cnpj", limit: 19, null: false
@@ -36,4 +52,5 @@ ActiveRecord::Schema.define(version: 2018_06_27_003815) do
     t.index ["reset_password_token"], name: "index_companies_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "attractions", "companies"
 end

@@ -27,7 +27,8 @@
 					<td><%= image_tag attraction.image(:medium)%></td>
 					<td><%= attraction.price%></td>
 					<td>
-						
+						<%= link_to "Editar", {controller: "register_attractions", action: 'edit', id: attraction.id }, :class => "btn btn-warning"%>
+						<%= link_to "Deletar", {}, :class => "btn btn-danger"%>
 					</td>
 				</tr>
 			<% end -%>

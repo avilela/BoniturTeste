@@ -1,4 +1,5 @@
-<div class="row"> 
+<br>
+<div class="row justify-content-end"> 
 	<%= link_to "Adicionar Atração", {:action => "new", :controller => "register_attractions"}, {:class => "btn btn-success float-right"}%>
 </div>
 <br>
@@ -22,10 +23,10 @@
 					<td><%= attraction.id%></td>
 					<td><%= attraction.name %></td>
 					<td><%= attraction.address %></td>
-					<td><%= attraction.duration_time %></td>
+					<td><%= attraction.duration_time.strftime("%H:%M") %></td>
 					<td><%= attraction.max_people %></td>
 					<td><%= image_tag attraction.image(:medium)%></td>
-					<td><%= attraction.price%></td>
+					<td><%= number_to_currency(attraction.price, unit: "R$", separator: ",")%></td>
 					<td>
 						<%= link_to "Editar", {controller: "register_attractions", action: 'edit', id: attraction.id }, :class => "btn btn-warning"%>
 						<%= link_to "Deletar",{ controller: "register_attractions", action: 'destroy', id: attraction.id} ,  method: :delete, data: { confirm: 'Tem certeza?' }, :class => "btn btn-danger" %></td>

@@ -1,19 +1,19 @@
-<h2>Sign up</h2>
+<h2>Cadastro de Empresa</h2>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
-  	<%= f.input :cnpj, require: true,  autofocus: true %>
-  	<%= f.input :social_name, require: true%>
-  	<%= f.input :fantasy_name, require: true%>
-    <%= f.input :email, required: true %>
-    <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
-    <%= f.input :password_confirmation, required: true %>
+  	<%= f.input :cnpj, label: 'CNPJ', autofocus: true, required: true %>
+  	<%= f.input :social_name, label: 'Razão Social', required: true%>
+  	<%= f.input :fantasy_name, label: 'Nome Fantasia', required: true%>
+    <%= f.input :email, label: 'E-mail', required: true %>
+    <%= f.input :password, label: 'Senha',required: true, hint: ("#{@minimum_password_length} caracteres no mínimo" if @minimum_password_length) %>
+    <%= f.input :password_confirmation, label: 'Confirme sua senha', required: true %>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
+    <%= f.button :submit, "Confirma Cadastro", :class => "btn btn-primary" %>
   </div>
 <% end %>
 

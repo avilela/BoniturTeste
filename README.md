@@ -27,7 +27,7 @@ Após comando de instalação rode:
 $ bundle install
 ```
 ### Criação do banco de dados e geração das tabelas
-Após instalar as gems do projeto altere o arquivo ```bash database.yml ``` para as configurações do seu banco de dados, e rode os seguintes comandos:
+Após instalar as gems do projeto altere o arquivo ```database.yml ``` para as configurações do seu banco de dados, e rode os seguintes comandos:
 
 ```bash 
 $ bundle exec rails db:create

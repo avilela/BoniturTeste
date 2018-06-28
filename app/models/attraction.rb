@@ -1,6 +1,6 @@
 class Attraction < ApplicationRecord
-	has_attached_file :image, styles: { medium: "300x300>", large: "1920x1080#" }
-  	validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
-
+	has_one_attached :image
   	belongs_to :company
+
+  	validates_presence_of  :
 end

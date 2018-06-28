@@ -5,7 +5,6 @@ class CreateAttractions < ActiveRecord::Migration[5.2]
       t.text :address
       t.time :duration_time
       t.string :max_people
-      t.attachment :image
       t.decimal :price
       t.references :company, foreign_key: true
 

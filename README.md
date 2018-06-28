@@ -17,7 +17,7 @@ ou no MacOS
 $ brew install imagemagick
 ```
 
-###Configurações
+### Configurações
 Para instalar as dependências do projeto utilize a gem bundler, ela se encarregará de instalar as gems necessárias
  ```bash
 $ gem install bundler

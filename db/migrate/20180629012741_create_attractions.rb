@@ -4,8 +4,8 @@ class CreateAttractions < ActiveRecord::Migration[5.2]
       t.string :name
       t.text :address
       t.time :duration_time
-      t.string :max_people
-      t.decimal :price
+      t.integer :max_people
+      t.numeric :price
       t.references :company, foreign_key: true
 
       t.timestamps

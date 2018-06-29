@@ -1,0 +1,42 @@
+<br>
+<%if notice%>
+  <div class="alert alert-success" role="alert">
+    <%= notice %>
+  </div>
+<% end -%>
+
+<h1>Atrações</h1>
+
+<table class="table table-striped">
+  <thead class="thead-dark">
+    <tr>
+      <th><%= t('activerecord.attributes.attraction.name')%></th>
+      <th><%= t('activerecord.attributes.attraction.address')%></th>
+      <th><%= t('activerecord.attributes.attraction.duration_time')%></th>
+      <th><%= t('activerecord.attributes.attraction.max_people')%></th>
+      <th><%= t('activerecord.attributes.attraction.price')%></th>
+      <th><%= t('activerecord.attributes.attraction.company')%></th>
+      <th colspan="3">Ações</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @attractions.each do |attraction| %>
+      <tr>
+        <td><%= attraction.name %></td>
+        <td><%= attraction.address %></td>
+        <td><%= attraction.duration_time.strftime('%H:%M') %></td>
+        <td><%= attraction.max_people %></td>
+        <td><%= number_to_currency(attraction.price) %></td>
+        <td><%= attraction.company %></td>
+        <td><%= link_to 'Exibir', attraction, :class => "btn btn-primary"%></td>
+        <td><%= link_to 'Editar', edit_attraction_path(attraction), :class => "btn btn-warning" %></td>
+        <td><%= link_to 'Deletar', attraction, method: :delete, data: { confirm: 'Tem certeza?' }, :class => "btn btn-danger" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nova Atração', new_attraction_path, :class => "btn btn-success" %>

@@ -1,0 +1,24 @@
+<br>
+<%if notice%>
+  <div class="alert alert-success" role="alert">
+    <%= notice %>
+  </div>
+<% end -%>  
+
+<div class="card">
+  <%= image_tag @attraction.image.variant(resize: "900x800"), class: "card-img-top" %>
+  <div class="card-body">
+    <h5 class="card-title"><%= t("activerecord.models.attraction")%></h5>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><%= t('activerecord.attributes.attraction.name')%> - <%= @attraction.name %></li>
+    <li class="list-group-item"><%= t('activerecord.attributes.attraction.address')%> - <%= @attraction.address %></li>
+    <li class="list-group-item"><%= t('activerecord.attributes.attraction.duration_time')%> -<%= @attraction.duration_time.strftime('%H:%M') %></li>
+    <li class="list-group-item"><%= t('activerecord.attributes.attraction.max_people')%> - <%= @attraction.max_people %></li>
+    <li class="list-group-item"><%= t('activerecord.attributes.attraction.price')%> - <%= number_to_currency(@attraction.price) %></li>
+    <li class="list-group-item"><%= t('activerecord.attributes.attraction.company')%> - <%= @attraction.company %></li>
+  </ul>
+</div>
+<br>
+<%= link_to 'Editar', edit_attraction_path(@attraction), :class => "btn btn-warning" %> 
+<%= link_to 'Voltar', attractions_path, :class => "btn btn-danger" %>

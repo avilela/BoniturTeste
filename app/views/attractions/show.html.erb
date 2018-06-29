@@ -13,7 +13,7 @@
   <ul class="list-group list-group-flush">
     <li class="list-group-item"><%= t('activerecord.attributes.attraction.name')%> - <%= @attraction.name %></li>
     <li class="list-group-item"><%= t('activerecord.attributes.attraction.address')%> - <%= @attraction.address %></li>
-    <li class="list-group-item"><%= t('activerecord.attributes.attraction.duration_time')%> -<%= @attraction.duration_time.strftime('%H:%M') %></li>
+    <li class="list-group-item"><%= t('activerecord.attributes.attraction.duration_time')%> -<%= @attraction.duration_time.strftime('%Hh%M') %></li>
     <li class="list-group-item"><%= t('activerecord.attributes.attraction.max_people')%> - <%= @attraction.max_people %></li>
     <li class="list-group-item"><%= t('activerecord.attributes.attraction.price')%> - <%= number_to_currency(@attraction.price) %></li>
     <li class="list-group-item"><%= t('activerecord.attributes.attraction.company')%> - <%= @attraction.company %></li>

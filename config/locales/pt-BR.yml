@@ -53,6 +53,8 @@ pt-BR:
               blank: 'deve ser informado'
             price:
               blank: 'deve ser informado'
+            image:
+              invalid: 'insira a imagem'
   date:
     abbr_day_names:
     - Dom

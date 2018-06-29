@@ -6,7 +6,7 @@ Ruby - 2.4.0
 Rails - 5.2.0
 
 ### Dependencias do sistema
-No projeto estamos usando "Paperclip" para o upload de arquivos como dependência e ele necessita do imagemagick para isso, caso esteja usando linux utilize os comandos a baixo para instalar:
+No projeto estamos usando "Active Storage" para o upload de images como dependência e ele necessita do imagemagick para variações de tamanho da mesma, caso esteja usando linux utilize os comandos a baixo para instalar:
 
  ```bash
 $ sudo apt-get install imagemagick libmagickcore-dev libmagickwand-dev libmagic-dev

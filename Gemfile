@@ -6,6 +6,7 @@ ruby '2.4.0'
 source 'https://rails-assets.org' do
   gem 'rails-assets-bootstrap'
   gem 'rails-assets-jquery'
+  gem 'rails-assets-jQuery-Mask-Plugin'
 end
 
 gem 'rails', '~> 5.2.0'

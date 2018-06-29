@@ -1,0 +1,42 @@
+# encoding: UTF-8
+# pt-BR translations for Devise
+pt-BR:
+  activerecord:
+    models:
+      company: 'Companhia'
+    attributes:
+        company:
+          cnpj: 'CPNJ'
+          social_name: 'Razão Social'
+          fantasy_name: 'Nome Fantasia'
+          email: 'E-mail'
+          password: 'Senha'
+          password_confirmation: 'Confirme sua senha'
+        attraction:
+          name: 'Nome'
+          address: 'Endereço'
+          duration_time: 'Duração'
+          max_people: 'Máximo de pessoas'
+          price: 'Preço'
+          image: 'Imagem'
+    errors:
+      models:
+        company: 
+          attributes:
+            cnpj: 
+              blank: 'não pode ser vazio'
+              invalid: 'está com formato inválido'
+            social_name: 
+              blank: 'não pode ser vazio'
+            fantasy_name:
+              blank: 'não pode ser vazio'
+            email:
+              blank: 'não pode ser vazio'
+              invalid: 'está com um formato inválido'
+            password:
+              blank : 'não pode ser vazia'
+            password_confirmation:
+              blank: 'não poder ser vazio'
+              invalid: 'não tem o minímo de 6 caracteres'
+              confirmation: 'não está igual a senha'
+
